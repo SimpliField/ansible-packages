@@ -2,6 +2,6 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - role: ansible-package
+    - role: ansible-packages
       packages:
         - nginx
