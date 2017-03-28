@@ -11,7 +11,10 @@ Need ansible 2+
 Role Variables
 --------------
 
-
+* `packages_update_cache`: Defines if the APT cache should be updated. Defaults
+  to `no`.
+* `packages_cache_valid_time`: Defines for how long the APT cache should be
+  considered valid. Defaults to 3600 seconds.
 
 Dependencies
 ------------
@@ -25,7 +28,7 @@ Example Playbook
 - hosts: servers
   roles:
    - { role: SimpliField.packages, packages: [git] }
-   - { role: SimpliField.packages, packages: [{name: pymongo, state: present, update: true}] }
+   - { role: SimpliField.packages, packages: [{name: pymongo, state: present}], packages_update_cache: true }
 ```
 
 License
