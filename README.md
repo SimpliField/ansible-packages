@@ -28,7 +28,7 @@ Example Playbook
 - hosts: servers
   roles:
    - { role: SimpliField.packages, packages: [git] }
-   - { role: SimpliField.packages, packages: [{name: pymongo, state: present}], packages_update_cache: true }
+   - { role: SimpliField.packages, packages: [pymongo], packages_update_cache: true }
 ```
 
 License
